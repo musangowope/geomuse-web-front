@@ -1,33 +1,29 @@
-import path from "path";
-import { Configuration as WebpackConfiguration, HotModuleReplacementPlugin } from "webpack";
-import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import ESLintPlugin from "eslint-webpack-plugin";
+import path from 'path'
+import { Configuration as WebpackConfiguration, HotModuleReplacementPlugin } from 'webpack'
+import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server'
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import ESLintPlugin from 'eslint-webpack-plugin'
 
 interface Configuration extends WebpackConfiguration {
-  devServer?: WebpackDevServerConfiguration;
+  devServer?: WebpackDevServerConfiguration
 }
 
 const config: Configuration = {
-  mode: "development",
+  mode: 'development',
   output: {
-    publicPath: "/",
+    publicPath: '/',
   },
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   module: {
     rules: [
       {
         test: /\.(ts|js)x?$/i,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: [
-              "@babel/preset-env",
-              "@babel/preset-react",
-              "@babel/preset-typescript",
-            ],
+            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
           },
         },
       },
@@ -38,40 +34,34 @@ const config: Configuration = {
         },
       },
       {
-        test: /\.(jpg|png|jpeg)$/,
-        use: {
-          loader: 'url-loader',
-        },
+        test: /\.(c|sa|sc)ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
-      {
-        test: /\.(s(a|c)ss)$/,
-        use: ['style-loader','css-loader', 'sass-loader']
-      }
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: 'src/index.html',
     }),
     new HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({
-      async: false
+      async: false,
     }),
     new ESLintPlugin({
-      extensions: ["js", "jsx", "ts", "tsx"],
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
     }),
   ],
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   devServer: {
-    static: path.join(__dirname, "build"),
+    static: path.join(__dirname, 'build'),
     historyApiFallback: true,
     port: 4000,
     open: true,
-    hot: true
+    hot: true,
   },
-};
+}
 
-export default config;
+export default config
