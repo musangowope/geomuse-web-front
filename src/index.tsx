@@ -1,17 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./app.scss";
-
-const App = () => (
-    <h1>
-      My React and TypeScript App!!{" "}
-      {new Date().toLocaleDateString()}
-    </h1>
-);
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './styles/app.scss'
+import App from './App'
+import { Provider } from 'react-redux'
+import store from './redux/store'
 
 ReactDOM.render(
-    <React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
       <App />
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root'),
+)
