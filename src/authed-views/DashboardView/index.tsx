@@ -1,11 +1,12 @@
 import React from 'react'
 import { RouteComponentProps, useLocation } from '@reach/router'
-import { ChildrenType } from '../../utils/common-types-and-interfaces'
 import MusicMap from '../../components/redux-components/MusicMap'
 import { useAppDispatch } from '../../redux/store'
 import { getPlaylistsAsync } from '../../redux/slices/playlistsSlice'
 
-type DashboardViewType = RouteComponentProps & ChildrenType
+type DashboardViewType = RouteComponentProps & {
+  children: any
+}
 
 const DashboardView = ({ children }: DashboardViewType) => {
   const location = useLocation()
