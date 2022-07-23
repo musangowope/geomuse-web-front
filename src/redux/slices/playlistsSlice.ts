@@ -1,16 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import uniqid from 'uniqid'
 import { baseRequest } from '../../utils/common-data'
 import { BaseRequestType } from '../../utils/common-types-and-interfaces'
+import uniqid from 'uniqid'
 
 export type TrackType = {
   id?: string
-  image: string
-  name: string
-  artist: string
-  trackUrl: string
-  lat: number | string
-  long: number | string
+  image?: string
+  name?: string
+  artist?: string
+  trackUrl?: string
 }
 
 export type PlaylistType = {
@@ -19,6 +17,8 @@ export type PlaylistType = {
   dateCreated: Date
   tracks: Array<TrackType>
   isDraft: boolean
+  lat?: number
+  lng?: number
 }
 
 export type PlayListsStateType = {
@@ -34,7 +34,10 @@ export const addPlaylistAsync = createAsyncThunk(
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({
+        ...payload,
+        id: uniqid('playlist'),
+      }),
     })
     if (response.ok) {
       const playlist = await response.json()
