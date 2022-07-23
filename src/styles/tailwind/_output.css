@@ -601,25 +601,17 @@ video {
   left: 0px;
 }
 
-.tw-right-2 {
-  right: 0.5rem;
-}
-
 .tw-mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-.tw-mr-2 {
-  margin-right: 0.5rem;
-}
-
-.tw-mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .tw-mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.tw-mr-2 {
+  margin-right: 0.5rem;
 }
 
 .tw-flex {
@@ -653,10 +645,6 @@ video {
 
 .tw-p-2 {
   padding: 0.5rem;
-}
-
-.tw-pr-2 {
-  padding-right: 0.5rem;
 }
 
 .tw-text-white {
