@@ -1,7 +1,7 @@
 import React from 'react'
 import { RouteComponentProps, useLocation } from '@reach/router'
 import { ChildrenType } from '../../utils/common-types-and-interfaces'
-import MusicMap from '../../components/MusicMap'
+import MusicMap from '../../components/redux-components/MusicMap'
 import { useAppDispatch } from '../../redux/store'
 import { getPlaylistsAsync } from '../../redux/slices/playlistsSlice'
 
