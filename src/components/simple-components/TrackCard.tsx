@@ -1,9 +1,8 @@
 import React from 'react'
-import { iTrackType } from '../authed-views/DashboardView/SearchView'
+import { TrackType } from '../../redux/slices/playlistsSlice'
 
-interface iTrackCardProps extends iTrackType {
+interface iTrackCardProps extends TrackType {
   onMenuClick?: () => void
-  // onArtistNameClick?: () => void
 }
 
 const TrackCard = ({
