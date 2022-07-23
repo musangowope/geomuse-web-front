@@ -1,9 +1,8 @@
 import React from 'react'
-import useAuth from '../custom-hooks/useAuth'
-import { ChildrenType } from '../utils/common-types-and-interfaces'
+import useAuth from '../../custom-hooks/useAuth'
 import { Link } from '@reach/router'
 
-const Layout = (props: ChildrenType) => {
+const Layout = ({ children }: { children: any }) => {
   const [isAuth] = useAuth()
   return (
     <>
@@ -23,7 +22,7 @@ const Layout = (props: ChildrenType) => {
           </React.Fragment>
         ) : null}
       </nav>
-      <main>{props.children}</main>
+      <main>{children}</main>
     </>
   )
 }
