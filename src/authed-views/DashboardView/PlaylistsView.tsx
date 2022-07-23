@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, navigate, RouteComponentProps } from '@reach/router'
-import TrackCard from '../../components/TrackCard'
+import TrackCard from '../../components/simple-components/TrackCard'
 import { iReduxState, useAppDispatch } from '../../redux/store'
 import {
   addPlaylistAsync,
@@ -8,14 +8,14 @@ import {
   PlaylistType,
 } from '../../redux/slices/playlistsSlice'
 import { useSelector } from 'react-redux'
-import PlaylistPreview from '../../components/PlaylistPreview'
+import PlaylistPreview from '../../components/simple-components/PlaylistPreview'
 import uniqid from 'uniqid'
 
 const PlaylistsView = ({
   location: {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    state: { track = null },
+    state: { track = null } = {},
   },
 }: RouteComponentProps) => {
   const dispatch = useAppDispatch()
@@ -30,7 +30,7 @@ const PlaylistsView = ({
       dateCreated: new Date(),
     }
     if (track) {
-      playlist.tracks.push(track)
+      playlist?.tracks?.push(track)
     }
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -63,7 +63,7 @@ const PlaylistsView = ({
         <div className='tw-mb-5' key={index}>
           <PlaylistPreview
             key={index}
-            numberOfSongs={playlist.tracks.length}
+            numberOfSongs={playlist?.tracks?.length}
             name={playlist.name}
           />
           <div className='tw-flex'>
