@@ -1,6 +1,6 @@
 import React from 'react'
 import { useGetSearchResultsQuery } from '../../redux/queries/search'
-import GenreCard from '../../components/simple-components/GenreCard'
+import GenreCard from '../simple-components/GenreCard'
 
 type GenreFilterType = {
   label: string

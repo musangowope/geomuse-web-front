@@ -1,0 +1,78 @@
+{
+  "playlists": [
+    {
+      "name": "My Cool Playlist",
+      "tracks": [
+        {
+          "image": "https://usercontent.jamendo.com?type=album&id=474892&width=300&trackid=1926640",
+          "uri": "https://prod-1.storage.jamendo.com/?trackid=1926640&format=mp31&from=LnvGCGnDfQ5dDRt0bT6Oew%3D%3D%7CLdz3qv09miYvRQdNukTvIw%3D%3D",
+          "name": "Forward Thinking (Loop)",
+          "artist": "TimTaj",
+          "id": "1926640"
+        },
+        {
+          "image": "https://usercontent.jamendo.com?type=album&id=462552&width=300&trackid=1901071",
+          "uri": "https://prod-1.storage.jamendo.com/?trackid=1901071&format=mp31&from=oitBq5fQgyWrA40xLYhu6A%3D%3D%7CU8I7DTQAUhdu2Ey%2BG8SOmQ%3D%3D",
+          "name": "Unpacking",
+          "artist": "lesfm",
+          "id": "1901071"
+        },
+        {
+          "image": "https://usercontent.jamendo.com?type=album&id=474892&width=300&trackid=1926640",
+          "uri": "https://prod-1.storage.jamendo.com/?trackid=1926640&format=mp31&from=LnvGCGnDfQ5dDRt0bT6Oew%3D%3D%7CLdz3qv09miYvRQdNukTvIw%3D%3D",
+          "name": "Forward Thinking (Loop)",
+          "artist": "TimTaj",
+          "id": "1926640"
+        },
+        {
+          "image": "https://usercontent.jamendo.com?type=album&id=190724&width=300&trackid=1723768",
+          "uri": "https://prod-1.storage.jamendo.com/?trackid=1723768&format=mp31&from=lJHEdPbGRr21NrWuvtHhgg%3D%3D%7CR0hI6rWnbsAlIIHPgow4gw%3D%3D",
+          "name": "King of a Dead World",
+          "artist": "Derailed Messiah",
+          "id": "1723768"
+        }
+      ],
+      "lat": -33.96204901722441,
+      "lng": 18.496599197387695,
+      "dateCreated": "2022-07-24T11:59:05.114Z",
+      "isDraft": true,
+      "id": "playlistl5z9oqzh"
+    },
+    {
+      "name": "-33.96478973575146 18.493165969848633",
+      "tracks": [],
+      "lat": -33.96478973575146,
+      "lng": 18.493165969848633,
+      "dateCreated": "2022-07-24T11:59:07.553Z",
+      "isDraft": true,
+      "id": "playlistl5z9osv6"
+    },
+    {
+      "name": "-33.96147950618964 18.507027626037598",
+      "tracks": [],
+      "lat": -33.96147950618964,
+      "lng": 18.507027626037598,
+      "dateCreated": "2022-07-24T11:59:09.832Z",
+      "isDraft": true,
+      "id": "playlistl5z9oumi"
+    },
+    {
+      "name": "-33.95509717885785 18.495954758891088",
+      "tracks": [],
+      "lat": -33.95509717885785,
+      "lng": 18.495954758891088,
+      "dateCreated": "2022-07-24T11:59:19.855Z",
+      "isDraft": true,
+      "id": "playlistl5z9p2cz"
+    },
+    {
+      "name": "-33.96154003337954 18.484582192667943",
+      "tracks": [],
+      "lat": -33.96154003337954,
+      "lng": 18.484582192667943,
+      "dateCreated": "2022-07-24T11:59:21.182Z",
+      "isDraft": true,
+      "id": "playlistl5z9p3dr"
+    }
+  ]
+}
