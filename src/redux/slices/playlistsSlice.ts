@@ -42,7 +42,6 @@ export const addPlaylistAsync = createAsyncThunk(
     if (response.ok) {
       const playlist = await response.json()
       return { playlist } as {
-        [key: string]: any
         playlist: PlaylistType
       }
     }
